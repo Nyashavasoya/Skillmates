@@ -11,3 +11,13 @@
 20211011	17:49:24	2b74f46b-65d3-4041-9c87-65e0982d46ad	POST	undefined	/auth
 20211011	17:49:38	32899fb9-23b8-49fc-95ac-631462d7174c	POST	undefined	/employees
 20211011	17:49:44	df0482cf-3962-4078-9a8e-b4712e1d8658	DELETE	undefined	/employees
+20230827	15:44:07	157c187c-83e3-412f-9114-7d4f68be6a24	POST	undefined	/register
+20230827	15:45:34	1f67db5e-6011-4a9f-aea4-7bd27368fa6f	POST	undefined	/register
+20230827	15:48:53	0caa0479-0c4f-4779-8071-a422e1641fd6	POST	undefined	/register
+20230827	15:52:19	d284c943-2d46-4aca-a91d-543679cba299	POST	undefined	/register
+20230827	15:54:42	4de36aed-af45-4c71-b4b1-8b1c36fb276a	POST	undefined	/register
+20230827	15:56:25	210d2215-eb0a-414a-b3ad-606cea5a278c	POST	undefined	/register
+20230827	15:56:31	ded32603-7c03-4aa3-9709-f2116f99387f	POST	undefined	/register
+20230827	15:57:53	1d1f5454-e7e4-4339-907a-7e570f15eebd	GET	undefined	/
+20230827	15:57:53	74da0cdf-d0d0-4faf-8fb5-605a30b85640	GET	undefined	/css/style.css
+20230827	15:57:53	e279c3a4-b69b-4c39-925a-c7f3d6b7e95f	GET	undefined	/favicon.ico

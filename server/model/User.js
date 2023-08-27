@@ -19,13 +19,36 @@ roles:{
 
 
 },
+firstname:{
+
+  type:String,
+  requires:true
+
+},
+lastname:{
+
+  type:String,
+  requires:true
+
+},
+
+
 
 password:{
     type:String,
     required:true
 },
+BatchYear: {
+  type: String,  
+  required: true
+},
+skills: [String], 
+
+interest: String, 
 
 refreshToken:String
+
+
 
 
 });
