@@ -19,14 +19,13 @@ roles:{
 
 
 },
-
+  
 password:{
     type:String,
     required:true
 },
 
 refreshToken:String
-
 
 });
 
