@@ -1,0 +1,66 @@
+
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #6fc6ef, #ffffff, rgb(86, 215, 86));;
+}
+.login-container {
+    background-color: #f0f0f0;
+    border: 3px solid #a20ee7;
+    padding: 20px;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .login-container h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .register-container {
+    background-color: #f0f0f0;
+    border: 3px solid #a20ee7;
+    padding: 20px;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .register-container h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+  }
+
+  .login-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-button:hover {
+    background-color: #2980b9;
+  }
+
+  .register-button {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  .register-button:hover {
+    background-color: #27ae60;
+  }

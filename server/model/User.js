@@ -5,46 +5,28 @@ const userSchema=new Schema({
 
 
 username:{
-
-      type:String,
-      requires:true
-
-},
-roles:{
-  User:{
-    type:Number,
-    default:2001
-  },
-  Editor:Number,
-  Admin: Number
-
+  type:String,
+  requires:true
 
 },
-  
 password:{
     type:String,
     required:true
 },
 profilePicture: {
-  type: String,  
+  type: String,
   default: false
 },
 BatchYear: {
-  type: String,  
+  type: String,
   required: true
 },
-skills: [String], 
-
-interest: String, 
-
-refreshToken:String,
-
-  github_username: { type: String, required: true},
-
-  refreshToken:String,
+skills: [String],
 
 
-
+interest: String,
+github_username: { type: String, required: true},
+refreshToken:String
 
 });
 

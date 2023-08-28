@@ -21,11 +21,7 @@ const handleNewUser = async (req, res) => {
             "BatchYear": BatchYear,
             "skills": skills,
             "interest": interest,
-
-            "BatchYear": BatchYear,
             "profilePicture":profilePicture,
-
-
             "github_username":github_username
 
         });
