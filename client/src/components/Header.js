@@ -1,10 +1,12 @@
 import React from 'react';
-import './Header.css'; // Import the CSS file for header styling
+import './Header.css';
+import SearchBar from './SearchBar';
 
 const Header = () => {
   return (
     <header className="header">
       <div className="logo">Your Logo</div>
+      <SearchBar />
       <nav className="nav">
         <ul>
           <li><a href="/">Home</a></li>
