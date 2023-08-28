@@ -1,6 +1,10 @@
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useEffect,useState} from 'react';
+import NewProjectForm from './components/NewProjectForm';
+import UpdateProjectForm from './components/UpdateProjectForm';
+import DeleteProject from './components/DeleteProject';
+import ProjectList from './components/ProjectList';
 
 export default function UserProfile(){
     const { username } = useParams();
@@ -87,6 +91,17 @@ export default function UserProfile(){
               </ul>
             ):(<p>Loading...</p>)}
          </div>
+
+      {/* Render Project Feature Components */}
+        <div className="project-feature-section">
+          <CreateProjectForm />
+          <UpdateProjectForm />
+          <DeleteProjectForm />
+        </div>
+      
+        <div className="project-list-section">
+          <ProjectList />
+        </div>
       </div>
     )
 }

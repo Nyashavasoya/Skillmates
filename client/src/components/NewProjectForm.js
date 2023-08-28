@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './project-features.css';
 
 const NewProjectForm = () => {
   const [projectName, setProjectName] = useState('');
@@ -25,7 +26,7 @@ const NewProjectForm = () => {
   };
 
   return (
-    <div>
+    <div class='create-form'>
       <h2>Create New Project</h2>
       <form onSubmit={handleSubmit}>
         <input

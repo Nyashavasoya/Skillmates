@@ -1,4 +1,5 @@
 import React from 'react';
+import './project-features.css';
 
 const DeleteProject = ({ projectId }) => {
   const handleDelete = () => {
@@ -15,7 +16,7 @@ const DeleteProject = ({ projectId }) => {
   };
 
   return (
-    <div>
+    <div class='delete-form'>
       <button onClick={handleDelete}>Delete Project</button>
     </div>
   );

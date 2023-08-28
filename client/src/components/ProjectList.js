@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './project-features.css';
 
 const ProjectList = () => {
   const [projects, setProjects] = useState([]);
@@ -13,7 +14,7 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <div>
+    <div class ='project-list'>
       <h2>Project List</h2>
       {projects.map(project => (
         <div key={project._id}>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './project-features.css';
 
 const UpdateProjectForm = ({ projectId }) => {
   const [project, setProject] = useState({});
@@ -38,7 +39,7 @@ const UpdateProjectForm = ({ projectId }) => {
   };
 
   return (
-    <div>
+    <div class='update-form'>
       <h2>Update Project</h2>
       <form onSubmit={handleSubmit}>
         <input
