@@ -8,7 +8,6 @@ export default function UserProfile(){
     const [usergithubData, setUsergithubData] = useState(null);
     const [usergithubRepo, setusergithubRepo]=useState([]);
     useEffect(() => {
-
         const getUser = async(username)=>{
             try {
                 const response = await axios.get(`http://localhost:3500/user/${username}`);

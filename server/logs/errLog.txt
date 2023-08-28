@@ -4,3 +4,4 @@
 20230828	01:30:43	e9216bd7-8df4-46e4-90ad-a98733dc1baa	Error: Not allowed by CORS
 20230828	01:33:07	b5d9dd10-2cee-4a4a-b721-d5c4d394a5de	Error: Not allowed by CORS
 20230828	01:33:10	919f0590-dde4-4407-9b05-63dfd2b632e8	Error: Not allowed by CORS
+20230828	16:13:40	30e55c83-a49d-477a-ac00-4468eb364cea	SyntaxError: Unexpected token } in JSON at position 156
