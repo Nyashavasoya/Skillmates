@@ -4,7 +4,9 @@ const bcrypt = require('bcrypt');
 const handleNewUser = async (req, res) => {
 
     //  console.log(req.body)
-    const { user, pwd, BatchYear, skills, interest,github_username } = req.body;
+
+    const { user, pwd, BatchYear, skills, interest,profilePicture,github_username } = req.body;
+
     if (!user || !pwd) return res.status(400).json({ 'message': 'Username and password are required.' });
     // check for duplicate usernames in the db
     const duplicate = await User.findOne({username:user}).exec();
@@ -19,7 +21,13 @@ const handleNewUser = async (req, res) => {
             "BatchYear": BatchYear,
             "skills": skills,
             "interest": interest,
+
+            "BatchYear": BatchYear,
+            "profilePicture":profilePicture,
+
+
             "github_username":github_username
+
         });
         console.log(result);
 
