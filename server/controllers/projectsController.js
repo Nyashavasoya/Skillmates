@@ -2,7 +2,7 @@ const project =require('../model/project');
 
 
 const getAllProjects = async (req, res) => {
-    const projects= await project.find({"userID": req.body.id});
+    const projects= await project.find({"userID": req.body.userID});
     if(!projects) return res.status(204).json({'message':'No projects found.'})
     res.json(projects);
 }
