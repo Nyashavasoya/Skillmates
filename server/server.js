@@ -10,13 +10,21 @@ const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose=require('mongoose');
-const connectDB=require('./config/dbConn');
+// const connectDB=require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
 
 console.log(process.env.DATABASE_URI)
 //connect to mongoDB
-
+function connectDB(){
+    mongoose.connect(process.env.MONGODB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        // useCreateIndex: true,
+        // useFindAndModify: false
+    });
+};
 connectDB();
+
 
 // custom middleware logger
 // app.use(logger);

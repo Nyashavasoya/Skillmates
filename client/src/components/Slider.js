@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Slider.css';
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,7 +16,7 @@ const Slider = () => {
         title: 'Unlock Your Potential',
         content: 'Whether you\'re looking to learn a new skill, showcase your achievements, or join hackathons, SkillMates has got you covered. With a diverse range of profiles and opportunities, you can unlock your full potential.',
     }
-   
+
   ];
 
   const nextSlide = () => {

@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
-import './SearchBar.css';
-
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState('');
-
+  const navigate = useNavigate();
   const handleSearch = () => {
-
-    const searchResults = users.filter((user) =>
-    ['name', 'surname', 'skills', 'interest'].some((field) =>
-      user[field].toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  );
-
+    const getUser = async(username)=>{
+      try {
+        const response = await axios.get(`http://localhost:3500/user/${username}`);
+        navigate(`/user/${searchQuery}`);
+      } catch (error) {
+          console.error('Error:', error);
+      }
+    }
     console.log('Search query:', searchQuery);
+    getUser(searchQuery);
 
   };
 
@@ -20,7 +22,7 @@ const SearchBar = () => {
     <div className="search-bar">
       <input
         type="text"
-        placeholder="Search..."
+        placeholder="Search for people..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
       />
