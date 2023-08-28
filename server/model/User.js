@@ -37,10 +37,13 @@ skills: [String],
 
 interest: String, 
 
-refreshToken:String
+refreshToken:String,
 
   github_username: { type: String, required: true},
-  refreshToken:String
+
+  refreshToken:String,
+
+
 
 
 });
