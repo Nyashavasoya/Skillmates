@@ -6,6 +6,7 @@ export default function UserProfile(){
     const { username } = useParams();
     const [userData, setUserData] = useState(null);
     const [usergithubData, setUsergithubData] = useState(null);
+    const [usergithubRepo, setusergithubRepo]=useState([]);
     useEffect(() => {
 
         const getUser = async(username)=>{
@@ -27,7 +28,17 @@ export default function UserProfile(){
         if (userData) {
            getgithubuser(userData.github_username)
         }
-      }, [userData]);
+    }, [userData]);
+
+    useEffect(() => {
+      const getgithubrepo = async(usergithub)=>{
+          const response = await axios.get(`https://api.github.com/users/${usergithub}/repos`)
+          setusergithubRepo(response.data)
+      }
+      if (usergithubData) {
+         getgithubrepo(userData.github_username);
+      }
+  }, [usergithubData]);
 
     return (
       <div>
@@ -50,10 +61,32 @@ export default function UserProfile(){
          <div>
             <h1>GITHUB DATA</h1>
             {usergithubData ? (
-                <p>followers{usergithubData.followers}</p>
+                <div>
+                  <p>followers{usergithubData.followers}</p>
+                  <p>following {usergithubData.following}</p>
+                  <p>public repos {usergithubData.public_repos}</p>
+                  <a href={usergithubData.html_url}>link to github page</a>
+                </div>
             ) : (
                 <p>Loading...</p>
             )}
+         </div>
+
+         <div>
+            <h1>Repo Data</h1>
+            {usergithubRepo ? (
+              <ul>
+                {usergithubRepo.map((repo,index)=>{
+                  return (
+                    <li key={index}>
+                      <h1>{repo.name}</h1>
+                      <p>language {repo.language}</p>
+                      <a href={repo.svn_url}>repo link</a>
+                    </li>
+                  )
+                })}
+              </ul>
+            ):(<p>Loading...</p>)}
          </div>
       </div>
     )
