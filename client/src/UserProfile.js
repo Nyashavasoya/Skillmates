@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { useEffect,useState} from 'react';
+
 export default function UserProfile(){
     const { username } = useParams();
     const [userData, setUserData] = useState(null);
@@ -80,7 +81,7 @@ export default function UserProfile(){
                 })}
               </ul>
             ):(<p>Loading...</p>)}
-          </div>
+
       </div>
       <Footer/>
       </div>
