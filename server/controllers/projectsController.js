@@ -59,10 +59,11 @@ const deleteProject = async (req, res) => {
 }
 
 const getProject = async(req, res) => {
+    //corrected method
     if(!req?.params?.id)return res.status(400).json({'message':' ID is required'})
-     const aproject=await project.findOne({_id:req.params.id})
-    if (!aproject) {
-        return res.status(400).json({ "message": `no project matches ID ${req.params.id} not found` });
+     const aproject = await project.findOne({_id:req.params.id})
+    if (!aproject ) {
+        return res.status(400).json({ "message": `no project  matches ID ${req.params.id} not found` });
     }
     res.json(aproject);
 }

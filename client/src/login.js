@@ -10,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
+
     const userdata = {
       user:username,
       pwd:password,
@@ -18,6 +19,7 @@ const Login = () => {
        console.log(response.data.accessToken)
        navigate(`/user/${response.data.username}`);
    })
+
   };
 
   return (

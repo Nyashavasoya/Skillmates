@@ -12,6 +12,7 @@ const Register = () => {
   const [github, setGithub] = useState('');
 
   const handleRegister = () => {
+
     const userdata = {
        user:user,
        pwd:password,
@@ -23,6 +24,7 @@ const Register = () => {
     axios.post('http://localhost:3500/register',userdata).then((response)=>{
       navigate(`/user/${github}`);
     })
+
   };
 
   return (
