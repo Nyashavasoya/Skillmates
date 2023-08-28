@@ -38,6 +38,10 @@ password:{
     type:String,
     required:true
 },
+profilePicture: {
+  type: String,  
+  default: false
+},
 BatchYear: {
   type: String,  
   required: true
