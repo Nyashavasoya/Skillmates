@@ -3,6 +3,7 @@ const Schema=mongoose.Schema;
 
 const userSchema=new Schema({
 
+
 username:{
 
       type:String,
@@ -37,6 +38,10 @@ skills: [String],
 interest: String, 
 
 refreshToken:String
+
+  github_username: { type: String, required: true},
+  refreshToken:String
+
 
 });
 
