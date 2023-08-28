@@ -10,18 +10,12 @@ const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose=require('mongoose');
-// const connectDB=require('./config/dbConn');
+const connectDB=require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
 
+console.log(process.env.DATABASE_URI)
 //connect to mongoDB
-function connectDB(){
-    mongoose.connect(process.env.MONGODB_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        // useCreateIndex: true,
-        // useFindAndModify: false
-    });
-};
+
 connectDB();
 
 // custom middleware logger
@@ -56,7 +50,9 @@ app.use('/logout', require('./routes/logout'));
 app.use('/user',require('./routes/getUser'))
 // app.use(verifyJWT);
 app.use('/projects', require('./routes/api/projects'));
+app.use('/Connections', require('./routes/api/Connections'));
 
+app.use('/users', require('./routes/getUser'));
 
 app.all('*', (req, res) => {
     res.status(404);
