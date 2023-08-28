@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
 import './logister.css';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
-const Login = ({ onLogin }) => {
+
+const Login = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    onLogin({ username });
+
+    const userdata = {
+      user:username,
+      pwd:password,
+   }
+   axios.post(' http://localhost:3500/auth/',userdata).then((response)=>{
+       console.log(response.data.accessToken)
+       navigate(`/user/${response.data.username}`);
+   })
+
   };
 
   return (
