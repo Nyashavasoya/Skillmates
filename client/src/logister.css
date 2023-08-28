@@ -1,0 +1,29 @@
+.login-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .login-container h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .register-container {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .register-container h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+  }
+  
