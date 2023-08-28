@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './logister.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 const Register = () => {
