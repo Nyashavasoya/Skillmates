@@ -10,14 +10,22 @@ const verifyJWT = require('./middleware/verifyJWT');
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const mongoose=require('mongoose');
-const connectDB=require('./config/dbConn');
+// const connectDB=require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
 
 //connect to mongoDB
+function connectDB(){
+    mongoose.connect(process.env.MONGODB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        // useCreateIndex: true,
+        // useFindAndModify: false
+    });
+};
 connectDB();
 
 // custom middleware logger
-app.use(logger);
+// app.use(logger);
 
 // Handle options credentials check - before CORS!
 // and fetch cookies credentials requirement
@@ -29,7 +37,7 @@ app.use(cors(corsOptions));
 // built-in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
 
-// built-in middleware for json 
+// built-in middleware for json
 app.use(express.json());
 
 //middleware for cookies
@@ -41,12 +49,12 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 // routes
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
-app.use('/auth', require('./routes/auth'));
+// app.use('/auth', require('./routes/auth'));
 app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
-
+app.use('/user/',require('./routes/getUser'));
 app.use(verifyJWT);
-app.use('/employees', require('./routes/api/employees'));
+// app.use('/employees', require('./routes/api/employees'));
 
 app.all('*', (req, res) => {
     res.status(404);
