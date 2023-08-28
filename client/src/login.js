@@ -6,8 +6,6 @@ const Login = ({ onLogin }) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Here, you can implement your actual login logic.
-    // For simplicity, we'll just call the onLogin callback.
     onLogin({ username });
   };
 

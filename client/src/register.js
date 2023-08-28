@@ -6,8 +6,6 @@ const Register = ({ onRegister }) => {
   const [password, setPassword] = useState('');
 
   const handleRegister = () => {
-    // Here, you can implement your actual registration logic.
-    // For simplicity, we'll just call the onRegister callback.
     onRegister({ username });
   };
 
