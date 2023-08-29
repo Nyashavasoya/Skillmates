@@ -91,7 +91,28 @@ code {
 }
 
 .logo {
-  font-size: 24px;
+  display: flex;
+  align-items: center;
+  padding: 10px; 
+  background-color: #dbe8f4; 
+  border-radius: 15px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1); 
+}
+
+.logo img {
+  width: 60px; 
+  height: 60px; 
+  margin-right: 10px;
+  border-radius: 50%; 
+}
+
+.logo h1 {
+  font-family: 'Playfair Display', serif; 
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  color: #333333; 
+  text-transform: uppercase; 
 }
 
 .nav ul {

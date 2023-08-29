@@ -4,7 +4,10 @@ import SearchBar from './SearchBar';
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">Your Logo</div>
+      <div className="logo">
+      <img src="logo.jpg" alt="Skillmates Logo" />
+        <h1>SkillMates</h1>
+      </div>
       <div className="diff">
       <nav className="nav">
         <ul>

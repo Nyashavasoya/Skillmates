@@ -51,7 +51,7 @@ export default function UserProfile(){
          <Header />
          <div class="userpage">
          {( usergithubRepo && userData && usergithubData)?(
-                 <div class="user">
+              <div class="user">
                  <img src={userData.profilePicture}/>
                  <h2>{userData.username}</h2>
                <ul>
@@ -66,6 +66,7 @@ export default function UserProfile(){
               <p>public repos {usergithubData.public_repos}</p>
               </div>
           ):(<p>Loading...</p>)}
+          </div>
           <div className="repo">
           {usergithubRepo ? (
               <ul class="repodisplay">
