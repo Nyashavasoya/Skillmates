@@ -11,19 +11,20 @@ const NewProjectForm = () => {
     e.preventDefault();
     // Send the project data to the backend for creation
     // Example API request using Fetch:
-    fetch('/api/projects', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ projectName, technology, description }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        // Handle the response, you might want to update the UI or navigate to a new page
-        console.log('New project created:', data);
+    const newProject = {
+      projectName: projectName,
+      technology: technology,
+      description: description,
+    };
+
+    
+    axios.post('/api/projects', newProject)
+      .then(response => {
+        console.log('New project created:', response.data);
       })
-      .catch(error => console.error('Error creating project:', error));
+      .catch(error => {
+        console.error('Error creating project:', error);
+      });
   };
 
   return (

@@ -4,20 +4,20 @@ import axios from 'axios';
 
 const DeleteProject = ({ projectId }) => {
   const handleDelete = () => {
-    // Send a request to the backend to delete the project
-    fetch(`/api/projects/${projectId}`, {
-      method: 'DELETE',
-    })
-      .then(response => response.json())
-      .then(data => {
-        // Handle the response, you might want to update the UI or navigate to a new page
-        console.log('Project deleted:', data);
+    
+    axios.delete(`/api/projects/${projectId}`)
+      .then(response => {
+        console.log('Project deleted:', response.data);
       })
-      .catch(error => console.error('Error deleting project:', error));
+      .catch(error => {
+        console.error('Error deleting project:', error);
+      });
   };
 
   return (
     <div class='delete-form'>
+      <h2>Delete Project</h2>
+      <p>Are you sure you want to delete this project?</p>
       <button onClick={handleDelete}>Delete Project</button>
     </div>
   );

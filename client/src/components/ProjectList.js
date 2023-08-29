@@ -6,12 +6,13 @@ const ProjectList = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    // Fetch projects from the backend and update state
-    // Example API request using Fetch:
-    fetch('/api/projects')
-      .then(response => response.json())
-      .then(data => setProjects(data))
-      .catch(error => console.error('Error fetching projects:', error));
+    axios.get('/api/projects')
+      .then(response => {
+        setProjects(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching projects:', error);
+      });
   }, []);
 
   return (

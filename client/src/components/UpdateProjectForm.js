@@ -9,32 +9,29 @@ const UpdateProjectForm = ({ projectId }) => {
   const [description, setDescription] = useState('');
 
   useEffect(() => {
-    // Fetch the project details from the backend using the projectId
-    fetch(`/api/projects/${projectId}`)
-      .then(response => response.json())
-      .then(data => {
-        setProject(data);
-        setProjectName(data.projectName);
-        setTechnology(data.technology);
-        setDescription(data.description);
+
+    axios.get(`/api/projects/${projectId}`)
+      .then(response => {
+        const projectData = response.data;
+        setProjectName(projectData.projectName);
+        setTechnology(projectData.technology);
+        setDescription(projectData.description);
       })
-      .catch(error => console.error('Error fetching project details:', error));
+      .catch(error => {
+        console.error('Error fetching project data:', error);
+      });
   }, [projectId]);
 
   const handleSubmit = e => {
     e.preventDefault();
-    // Send the updated project data to the backend for update
-    fetch(`/api/projects/${projectId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ projectName, technology, description }),
+    
+    axios.put(`/api/projects/${projectId}`, {
+      projectName,
+      technology,
+      description
     })
-      .then(response => response.json())
-      .then(data => {
-        // Handle the response, you might want to update the UI or navigate to a new page
-        console.log('Project updated:', data);
+      .then(response => {
+        console.log('Project updated:', response.data);
       })
       .catch(error => console.error('Error updating project:', error));
   };
