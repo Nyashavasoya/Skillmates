@@ -1,5 +1,6 @@
 import React from 'react';
 import './project-features.css';
+import axios from 'axios';
 
 const DeleteProject = ({ projectId }) => {
   const handleDelete = () => {
