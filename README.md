@@ -7,8 +7,6 @@ Skillmates is a social platform designed to connect individuals with similar ski
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Getting Started
 
@@ -41,7 +39,4 @@ Skillmates is built using the MERN stack:
 - Authentication: JSON Web Tokens (JWT)
 - Styling: CSS and Bootstrap
 
-## Contributing
-
-We welcome contributions from the community! If you'd like to contribute to Skillmates, please follow our [contribution guidelines](CONTRIBUTING.md).
 
