@@ -45,6 +45,3 @@ Skillmates is built using the MERN stack:
 
 We welcome contributions from the community! If you'd like to contribute to Skillmates, please follow our [contribution guidelines](CONTRIBUTING.md).
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
